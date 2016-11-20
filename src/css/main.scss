@@ -1,0 +1,119 @@
+@import 'partials/_media';
+@import 'partials/_normalize';
+@import 'partials/_variables';
+@import 'partials/_mixins';
+
+
+
+
+body{
+    background-color: $main-body-color;
+    color:$normal-font;
+}
+
+.header{
+    background-color: $header-color;
+    height: $header-height;
+    color: $header-font-color;
+    @include big-padding;
+
+
+    .bars{
+        float:left;
+        @include button-header;
+        border-left: 1px solid #3c3c3c;
+    }
+
+    .logo{
+        float:left;
+        @include logo-header;
+    }
+
+    .feed{
+        float:right;
+        @include button-header;
+    }
+
+    .feed:last-child{
+        border-left: 1px solid #3c3c3c;
+    }
+
+
+
+
+}
+
+.slider{
+    @include slider;
+    @include big-padding;
+    img{
+        position: relative;
+        bottom:2px;
+    }
+}
+
+.news-form{
+    @include big-padding;
+    @include news-form;
+    margin-bottom: 60px;
+}
+
+
+.container{
+    @include big-padding;
+}
+
+.main{
+    width:$main-width;
+    float:left;
+    @include desktop-small{
+        float: none;
+        width: 100%;
+    }
+
+    @include desktop-tn{
+        float: none;
+        width: 100%;
+    }
+
+
+}
+
+.sidebar{
+    @include desktop-small{
+        float: none;
+        width: 100%;
+    }
+
+    @include desktop-tn{
+        float: none;
+        width: 100%;
+    }
+    float:left;
+    width: $sidebar-width;
+    min-width: 360px;
+    margin-left:1%;
+    background-color: $default-element-bgc;
+    padding: 40px 30px;
+
+
+
+    @include sidebar-form;
+    .sidebar-form{
+        margin-bottom: 40px;
+        background-color: $main-body-color;
+    }
+    button{
+        background-color: $dark-buttons-color;
+        color:white;
+    }
+}
+
+.article{
+    @include article;
+    background-color: $main-body-color;
+}
+
+
+
+

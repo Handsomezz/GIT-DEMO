@@ -1,0 +1,275 @@
+//GLOBAL PADDING
+
+@mixin big-padding{
+    padding-left: $padding-left-global;
+    padding-right: $padding-right-global;
+}
+
+
+//HEADER
+
+@mixin button-header{
+    width: 55px;
+    border-right: 1px solid #3c3c3c;
+    line-height: $header-height;
+    text-align: center;
+    width:$header-button-width;
+
+    &last-child{
+        border-left: 1px solid #3c3c3c;
+    }
+
+    a{
+        color:#fff;
+    }
+    a:hover{
+        color:#999999;
+    }
+}
+
+
+@mixin logo-header {
+    line-height: $header-height;
+    position: relative;
+    left:25%;
+    width: 30%;
+    text-align: center;
+    font-family: $hind;
+    font-weight: 600;
+    letter-spacing: 3px;
+
+    span{
+        font-size:1.3em;
+    }
+}
+
+@mixin slider{
+    border:none;
+    background: linear-gradient(to bottom, $header-color 50%, $main-body-color 50%);
+}
+
+@mixin news-form{
+
+    @include desktop-small{
+        height: auto;
+    }
+
+    @include desktop-tn{
+        height: auto;
+    }
+
+
+
+    height: $news-form-height;
+    vertical-align: middle;
+    padding-top:25px;
+    h1{
+        padding-left: 30px;
+        padding-right: 30px;
+        float:left;
+        font-size:20px;
+        font-family: $montserrat;
+        font-weight: 700;
+        letter-spacing: 2px;
+
+        @include desktop-small{
+            float: none;
+            width: 100%;
+            display: block;
+        }
+
+        @include desktop-tn{
+            float: none;
+            width: 100%;
+        }
+
+
+    }
+
+
+
+    input{
+        float:left;
+        margin-left: 27px;
+        height: 50px;
+        background-color: #fff;
+        border: none;
+        width: 300px;
+        padding-left: 28px;
+        font-family: $hind;
+        font-weight: 300;
+        font-size:15px;
+        @include desktop-small{
+            float: none;
+            display: block;
+        }
+
+        @include desktop-tn{
+            float: none;
+            width: 60%;
+        }
+
+    }
+
+
+    button{
+        float:left;
+        width: 280px;
+        height: 50px;
+        outline:none;
+        border: none;
+        margin-left: 33px;
+        background-color: $dark-buttons-color;
+        color:#fff;
+
+        @include desktop-tn{
+            //margin-left: 30%;
+            float: none;
+        }
+
+        @include desktop-small{
+            float: none;
+            width: 200px;
+        }
+    }
+}
+
+@mixin small-btn{
+    width: 50px;
+    height: 50px;
+    font-size:20px;
+    color:white;
+}
+
+@mixin sidebar-form{
+
+    input{
+        float: left;
+        width: 273px;
+        height: 50px;
+        padding-left: 28px;
+        font-family: $hind;
+        font-weight: 300;
+        font-size:15px;
+    }
+    button{
+        @include small-btn;
+        float:left;
+        border: none;
+    }
+}
+
+@mixin weak-part{
+    font-size: 16px;
+    float:left;
+    width: 50%;
+    color:$weak-font;
+    span{
+        padding-right: 12px;
+        color:$normal-font;
+    }
+
+}
+
+.sidebar-banner-block-lg{
+    margin-bottom: 20px;
+
+
+    @include desktop-small{
+        float:left;
+        margin-left: 1.5%;
+        margin-right: 1.5%;
+        width: 30.3333333%;
+    }
+
+    @include desktop-tn{
+        float:left;
+        margin-left: 1.5%;
+        margin-right: 1.5%;
+        width: 30.3333333%;
+    }
+}
+
+@mixin article{
+    text-align: center;
+    font-family: $hind;
+    padding: 0 88px;
+    button{
+        @include small-btn;
+        background-color: $dark-buttons-color;
+        margin: 0 auto;
+        position: relative;
+        bottom: 25px;
+    }
+
+    h3{
+        font-size:16px;
+        font-weight: 400;
+        color:$weak-font;
+        margin-bottom: 28px;
+    }
+
+    h1{
+        font-size: 28px;
+        font-family: $montserrat;
+        color:$normal-font;
+        font-weight: bold;
+        margin-bottom: 18px;
+    }
+
+    .author-date{
+        margin:0 auto;
+        width: 45%;
+        margin-bottom: 25px;
+        .author{
+            @include weak-part;
+        }
+
+        .date{
+            @include weak-part;
+        }
+    }
+
+    .main-text{
+        color:$normal-font;
+        padding: 0 30px;
+        font-weight: 300;
+        margin-bottom: 25px;
+    }
+
+    a{
+        font-weight: 500;
+        padding: 10px 13px;
+    }
+
+    hr{
+        margin-top: 30px;
+        margin-bottom: 25px;
+    }
+
+    .article-footer{
+        padding-bottom: 20px;
+        .comment-likes{
+            margin-left: 40px;
+            float:left;
+            width: 40%;
+            .comments{
+                @include weak-part;
+            }
+            .likes{
+                @include weak-part
+            }
+        }
+
+        .article-links{
+            float: right;
+            padding: 0 14px;
+
+            a{
+                color:$normal-font;
+            }
+        }
+    }
+
+}
+
